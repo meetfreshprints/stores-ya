@@ -92,7 +92,13 @@ const OrderSummary: React.FC<OrderSummaryProps> = ({
               onChange={(e) => setPromoCode(e.target.value)}
             />
           </div>
-          
+          <button
+            className="px-4 py-3 text-sm font-medium text-teal-600 hover:text-teal-700 hover:bg-teal-50 rounded-lg transition-colors disabled:text-gray-400 disabled:hover:bg-transparent disabled:cursor-not-allowed"
+            onClick={handleApplyPromoCode}
+            disabled={!promoCode.trim()}
+          >
+            Apply
+          </button>
         </div>
 
         {/* Separator */}
